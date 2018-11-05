@@ -1,0 +1,55 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  include ../components/img/img.pug
+  include ../components/page-header/page-header.pug
+  include ../components/footer-content/footer-content.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        +page-header
+        main.page-content
+          .hero
+            .hero__slider-wrap
+              .hero__slider.owl-carousel.reset-owl
+                - for (let i = 0; i < 3; i++)
+                  .hero__slider-slide
+                    h2 Много орехов - низкие цены!
+                    ul
+                      - for (let i = 0; i < 7; i++)
+                        li
+                          a(href="#")
+          .tit
+            .container
+              h2 Орехи оптом в Москве
+              div.block
+                p Интернет-магазин «Много орехов» - орехи, сухофрукты, семечки, цукаты, сладости, специи, пряности, крупы, бобовые, снеки, растительные масла, мёд и чай с доставкой домой или офис. Интернет-магазин продуктов для здорового питания специализируется на реализации орехов, сухофруктов, цукатов, сладостей, специй, пряностей и многих других полезных продуктов. Это современный и удобный ресурс, предлагающий оптовым и розничным покупателям качественные товары по минимальным ценам. Для вас отобрана только лучшая продукция, отвечающая всем существующим стандартам.
+                p Наш магазин - отличное решение для людей, желающих дешево покупать качественные продукты, поставляемые напрямую от производителя. Вся продукция проходит тщательный контроль качества, при хранении и транспортировке товара соблюдаются все санитарно-гигиенические правила и нормы. Цель магазина сделать ваше питание здоровым и правильным. Специалисты прекрасно разбираются в свойствах полезного продукта и заботятся о том, чтобы они удовлетворили каждого.
+          .tit
+            .container
+              h2 Качество и безопасность товаров
+          .features
+            .container
+              ul
+                each items in [{title:['Все орехи в', 'одном месте'],img:'nuts.svg',text:'Широкий ассортимент позволяет нашим клиентам оформить заказ в одном месте'},{title:['Доступные', 'цены и скидки'],img:'rate.svg',text:'У нас всегда доступные цены и скидки оптовым покупателям'},{title:['Доставка', 'точно в срок'],img:'calendar.svg',text:'У нас всегда доступные цены и скидки оптовым покупателям'},{title:['Сертификаты', 'качества'],img:'features-img.svg',text:'Высокое качество товаров, соблюдение правил их хранения и доставки'}]
+                  li
+                    div.headline
+                      each item in items.title
+                        p= item
+                    div.img
+                      +img('' + (items.img))
+                    p.text= items.text
+        
+      footer.page-footer
+        +footer-content
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

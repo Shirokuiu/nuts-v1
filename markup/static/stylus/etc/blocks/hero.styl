@@ -1,0 +1,109 @@
+.hero__slider
+  position relative
+  
+  box-sizing: border-box;
+  min-height: 250px;
+  padding-top: 90px;
+  
+  background-image url('%=static=%content/hero-bg.jpg')
+  background-repeat no-repeat
+  background-size cover
+  .owl-dots
+    display flex
+    justify-content center
+  .owl-dot
+    margin-right 15px
+    span
+      box-sizing border-box
+      display block
+      width 10px
+      height 10px
+      
+      border 1px solid #FFFFFF
+      border-radius 50%
+    &.active
+      span
+        border-width 3px
+    &:last-child
+      margin-right 0
+  .owl-nav
+    center-absolute()
+    
+    left 30px
+    right 30px
+    
+    display flex
+    justify-content space-between
+    align-items center
+    height 50px
+  .owl-prev,
+  .owl-next
+    box-sizing border-box
+    width 50px
+    height 50px
+    
+    border 2px solid #C9C9C9 !important
+    border-radius 50%
+    span
+      center-absolute()
+      bgs(20px, 20px)
+      bgi('back.svg')
+      &::before,
+      &::after
+        display none
+  
+.hero__slider-slide
+  display flex
+  flex-direction column
+  h2
+    font('Raleway', 48px, 700, #FFFFFF)
+    
+    margin-bottom 50px
+    
+    text-align center
+  ul
+    reset-list()
+    
+    display flex
+    margin-left auto
+    margin-right 30px
+    li
+      margin-right 4px
+      a
+        bgs(24px, 24px)
+        
+        text-decoration none
+        
+        background-color #ffffff
+      &:last-child
+        margin-right 0
+      &:nth-child(1)
+        a
+          bgi('vk.svg')
+      &:nth-child(2)
+        a
+          bgi('fb.svg')
+      &:nth-child(3)
+        a
+          bgi('od.svg')
+      &:nth-child(4)
+        a
+          bgi('g.svg')
+      &:nth-child(5)
+        a
+          bgi('tw.svg')
+      &:nth-child(6)
+        a
+          bgi('v.svg')
+      &:nth-child(7)
+        a
+          bgi('wa.svg')
+          
+          
+          
+          
+          
+          
+          
+          
+          

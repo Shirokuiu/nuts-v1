@@ -1,0 +1,46 @@
+mixin page-header(data)
+  header.page-header
+    div.row-top
+      .container
+        div.logo
+          div.img
+            +img('nut.svg')
+          div.text
+            p МНОГО
+            p ОРЕХОВ
+        ul.info
+          each items in [{text:'Каталог',icon:'nuts1',sell:false},{text:'Доставка и оплата',icon:'delivery-truck',sell:false},{text:'Акции и скидки',sell:true},{text:'Контакты',icon:'phone-book',sell:false}]
+            li
+              a(href="#" class="" + (items.sell ? 'sell' : ''))
+                span
+                  if !items.sell
+                    != pugHelpers.Icon.call(locals, {iconName: '' + items.icon, className: 'icon'})
+                p= items.text
+        div.basket
+          a(href="#")
+            div.round
+              span.count 5
+              span.icon
+                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
+            div.price
+              p 2450
+              span
+                != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+        div.time
+          a(href="tel:+74952087488") +7 (495) 208-74-88
+            span
+              != pugHelpers.Icon.call(locals, {iconName: 'phone-call', className: 'icon'})
+          p  Пн-Пт 9:00 до 20:00
+            span
+              != pugHelpers.Icon.call(locals, {iconName: 'clock', className: 'icon'})
+    div.row-bottom
+      .container
+        nav
+          ul
+            each items in ['Грецкие орехи','Кедровые орехи','Арахис','Миндаль','Фисташки','Фундук','Кешью','Кунжут','Сухофрукты','Мёд']
+              li
+                a(href="#")= items
+                  span 5
+                
+            
+            

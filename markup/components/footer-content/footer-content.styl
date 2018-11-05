@@ -1,0 +1,233 @@
+.footer-content
+  padding-top 50px
+  padding-bottom 30px
+  
+  background-color #B35F49
+  .row-bottom
+    .container
+      display flex
+      justify-content space-between
+      align-items center
+      .copyright
+        font('Gotham Pro', 18px, 400, #DC9F90)
+      .dev
+        display flex
+        align-items center
+        span
+          bgs(88px, 31px)
+          bgi('metr.jpg')
+        a
+          display flex
+          align-items center
+          margin-right 20px
+          
+          text-decoration none
+          p
+            font('Raleway', 18px, 500, #DC9F90)
+            
+            margin-right 14px
+          span
+            bgs(130px, 36px)
+            bgi('esst.svg')
+  .row-middle
+    margin-bottom 85px
+    
+    border-top 1px solid #DC9F90
+    border-bottom 1px solid #DC9F90
+    .row
+      border-bottom 1px solid #DC9F90
+      .container
+        box-sizing border-box
+      ul
+        reset-list()
+        
+        display flex
+        justify-content space-between
+        align-items center
+      &:nth-child(2)
+        padding 30px 0
+        .container
+          padding-right: 3%;
+        ul
+          li
+            a
+              font('Raleway', 20px, 500, #DC9F90, true)
+              
+              position relative
+              
+              transition 0.2s ease
+              &::before
+                content ''
+                
+                position absolute
+                left 0
+                bottom -3px
+                
+                width 100%
+                height 1px
+                
+                background-color #FFFFFF
+                
+                opacity 0
+                
+                transition 0.2s ease
+              &:hover
+                color #FFFFFF
+                &::before
+                  opacity 1
+      &:nth-child(1)
+        padding 21px 0
+        ul
+          li
+            font('Muller', 18px, 400, #FFFFFF)
+            
+            display flex
+            flex-direction row-reverse
+            align-items center
+            span
+              icon(20px, 20px, #FFFFFF)
+              
+              margin-right 6px
+            &:nth-child(1)
+              span
+                icon(25px, 25px, #FFFFFF)
+      &:last-child
+        margin-bottom 0
+        
+        border-bottom 0
+  .row-top
+    margin-bottom 37px
+    .container
+      display flex
+      justify-content flex-end
+      align-items center
+      box-sizing border-box
+      .tel
+        font('Muller', 24px, 700, #FFFFFF, true)
+        
+        display flex
+        flex-direction row-reverse
+        align-items center
+        margin-left: 5.855%;
+        span
+          icon(25px, 25px, #ffffff)
+          
+          margin-right 5px
+      .list2
+        reset-list()
+        
+        display flex
+        align-items center
+        li
+          margin-right 64px
+          &:last-child
+            margin-right 0
+          a
+            display flex
+            align-items center
+            
+            text-decoration none
+            span
+              icon(32px, 32px, #DC9F90)
+              
+              margin-right 10px
+              .icon
+                transition 0.2s ease
+            p
+              font('Raleway', 22px, 500, #DC9F90)
+              
+              position relative
+              
+              transition 0.2s ease
+              &::before
+                content ''
+                
+                position absolute
+                left 0
+                bottom -4px
+                
+                width 100%
+                height 1px
+                
+                background-color #ffffff
+                
+                opacity 0
+                
+                transition 0.2s ease
+            &:hover
+              span
+                .icon
+                  fill #ffffff
+              p
+                color #ffffff
+                &::before
+                  opacity 1
+          &:nth-child(1)
+            a
+              span
+                bgs(30px, 30px)
+                bgi('discount-footer.svg')
+      .logo
+        display flex
+        align-items center
+        margin: 0 2.715%;
+        .img
+          width 60px
+          margin-right 3px
+        .text
+          p
+            &:nth-child(1)
+              font('Muller', 36px, 700, #F0C419)
+            &:nth-child(2)
+              font('Muller', 24px, 700, #F9A12B)
+
+              letter-spacing 6px
+      .list1
+        reset-list()
+        
+        display flex
+        align-items center
+        li
+          margin-right 64px
+          &:last-child
+            margin-right 0
+          a
+            display flex
+            align-items center
+            
+            text-decoration none
+            span
+              icon(32px, 32px, #DC9F90)
+              
+              margin-right 10px
+              .icon
+                transition 0.2s ease
+            p
+              font('Raleway', 22px, 500, #DC9F90)
+              
+              position relative
+              
+              transition 0.2s ease
+              &::before
+                content ''
+                
+                position absolute
+                left 0
+                bottom -4px
+                
+                width 100%
+                height 1px
+                
+                background-color #ffffff
+                
+                opacity 0
+                
+                transition 0.2s ease
+            &:hover
+              span
+                .icon
+                  fill #ffffff
+              p
+                color #ffffff
+                &::before
+                  opacity 1
