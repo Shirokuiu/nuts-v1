@@ -3,6 +3,8 @@ mixin page-header(data)
     div.row-top
       .container
         div.logo
+          button.btn(type="button")
+            != pugHelpers.Icon.call(locals, {iconName: 'menu', className: 'icon'})
           div.img
             +img('nut.svg')
           div.text
@@ -19,11 +21,11 @@ mixin page-header(data)
         div.basket
           a(href="#")
             div.round
-              span.count 5
+              span.count 0
               span.icon
                 != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
             div.price
-              p 2450
+              p 0
               span
                 != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
         div.time
@@ -33,8 +35,9 @@ mixin page-header(data)
           p  Пн-Пт 9:00 до 20:00
             span
               != pugHelpers.Icon.call(locals, {iconName: 'clock', className: 'icon'})
-    div.row-bottom
+    div.row-bottom.close
       .container
+        button.exit(type="button")
         nav
           ul
             each items in ['Грецкие орехи','Кедровые орехи','Арахис','Миндаль','Фисташки','Фундук','Кешью','Кунжут','Сухофрукты','Мёд']

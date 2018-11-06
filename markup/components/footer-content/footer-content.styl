@@ -231,3 +231,240 @@
                 color #ffffff
                 &::before
                   opacity 1
+                  
+@media(max-width 1560px)
+  .footer-content
+    padding-top: 20px;
+    
+  .footer-content .row-top
+    margin-bottom: 20px;
+    
+  .footer-content .row-top .container
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  .footer-content .row-top .container .list1
+    flex-grow: 1;
+    justify-content: space-around;
+    
+  .footer-content .row-top .container .list1 li
+    margin-right: 0;
+    
+  .footer-content .row-top .container .logo
+    margin: 0;
+    
+  .footer-content .row-top .container .list2
+    flex-grow: 1;
+    justify-content: space-around;
+    
+  .footer-content .row-top .container .list2 li
+    margin-right: 0;
+    
+  .footer-content .row-top .container .tel
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    
+  .footer-content .row-middle
+    margin-bottom: 30px;
+    
+@media(max-width 1220px)
+  .footer-content .row-top .container .list1 li a span
+    width: 25px;
+    height: 25px;
+    
+  .footer-content .row-top .container .list1 li a span .icon
+    width: 25px;
+    height: 25px;
+    
+  .footer-content .row-top .container .list1 li a p
+    font-size: 16px;
+    line-height: 20px;
+    
+  .footer-content .row-top .container .logo .img
+    width: 50px;
+    
+  .footer-content .row-top .container .logo .text p:nth-child(1)
+    font-size: 27px;
+    line-height: 31px;
+    
+  .footer-content .row-top .container .logo .text p:nth-child(2)
+    font-size: 18px;
+    line-height: 22px;
+    
+  .footer-content .row-top .container .list2 li:nth-child(1) a span
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    
+  .footer-content .row-top .container .list2 li a p
+    font-size: 16px;
+    line-height: 20px;
+    
+  .footer-content .row-top .container .list2 li a span
+    width: 25px;
+    height: 25px;
+    
+  .footer-content .row-top .container .list2 li a span .icon
+    width: 25px;
+    height: 25px;
+    
+  .footer-content .row-top .container .tel
+    font-size: 18px;
+    line-height: 22px;
+    
+  .footer-content .row-top .container .tel span
+    width: 20px;
+    height: 20px;
+    
+  .footer-content .row-top .container .tel span .icon
+    width: 20px;
+    height: 20px;
+    
+  .footer-content .row-middle .row:last-child
+    padding: 15px 0;
+    
+  .footer-content .row-middle .row:nth-child(2) ul li a
+    font-size: 17px;
+    line-height: 21px;
+    
+  .footer-content .row-bottom .container .copyright
+    font-size: 14px;
+    line-height: 18px;
+    
+  .footer-content .row-bottom .container .dev a p
+    font-size: 14px;
+    line-height: 18px;
+  
+@media(max-width 920px)
+  .footer-content
+    padding-top: 10px;
+    padding-bottom: 70px;
+    
+  .footer-content .row-top .container
+    flex-direction: column;
+    
+  .footer-content .row-top .container .list1
+    order: 2;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .container .list1 li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+    
+  .footer-content .row-top .container .list1 li a span
+    display: none;
+    
+  .footer-content .row-top .container .logo
+    order: 1;
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .container .list2
+    order: 3;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .container .list2 li
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 0
+    
+  .footer-content .row-top .container .list2 li:nth-child(1) a span
+    display: none;
+    
+  .footer-content .row-top .container .list2 li a span
+    display: none;
+    
+  .footer-content .row-top .container .tel
+    order: 4;
+    margin-top: 0;
+    
+  .footer-content .row-top .container .tel span
+    display: none;
+    
+  .footer-content .row-middle
+    margin-bottom: 15px;
+    
+  .footer-content .row-middle .row ul
+    flex-direction: column;
+    
+  .footer-content .row-middle .row:nth-child(2) ul li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+  .footer-content .row-bottom
+    position: relative;
+    
+  .footer-content .row-bottom .container
+    flex-direction: column-reverse;
+    
+  .footer-content .row-bottom .container .dev
+    margin-bottom: 15px;
+    
+  .footer-content .row-bottom .container .dev span
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -52px;
+    margin: auto;
+    
+  .footer-content .row-middle .row:nth-child(1) ul li
+    flex-direction: column-reverse;
+    margin-bottom 15px
+    &:last-child
+      margin-bottom 0
+      
+  .footer-content .row-middle .row:nth-child(1) ul li span
+    margin-bottom 10px
+    
+  .footer-content .row-bottom .container .dev a span
+    position static
+    
+    display: block;
+    width: 130px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: 130px 36px;
+    background-image: url(../img/content/esst.svg);
+    
+  .footer-content .row-bottom .container .dev a
+    margin-right 0
+    
+@media(max-width 480px)
+  .footer-content .row-bottom .container .dev
+    margin-bottom: 10px;
+    
+  .footer-content .row-bottom .container .dev a
+    flex-direction: column;
+    
+  .footer-content .row-bottom .container .dev a p
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+@media(max-width 375px)
+  .footer-content .row-bottom .container .copyright
+    font-size: 13px;
+    line-height: 17px;
+    
+@media(max-width 320px)
+  .footer-content .row-middle .row:nth-child(1) ul li
+    font-size: 16px;
+    line-height: 20px;
+    
+  .footer-content .row-bottom .container .copyright
+    font-size: 11px;
+    line-height: 15px;
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  

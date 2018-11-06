@@ -36,33 +36,60 @@ const CartPlugin = function (options) {
       const plus = evt.target.closest('.plus');
       const thisPrice = par.querySelector(globThis.price);
       const thisCurrentPrice = par.querySelector(globThis.select);
+      const priceContainer = par.querySelector('.cart .cont .row-price .current-price');
       
       if (minus) {
         if (parseInt(val.textContent, 10) > 1) {
           val.textContent = parseInt(val.textContent, 10) - 1;
           thisPrice.textContent = addSpace(parseInt(removeSpace(thisPrice.textContent), 10) - parseInt(removeSpace(thisCurrentPrice.dataset.currentPrice), 10));
+          
+          if (parseInt(removeSpace(thisPrice.textContent), 10) < 1000) {
+            priceContainer.classList.remove('fix1000');
+          } else if (parseInt(removeSpace(thisPrice.textContent), 10) < 10000) {
+            priceContainer.classList.add('fix1000');
+            priceContainer.classList.remove('fix10000');
+          };
         };
       };
       
       if (plus) {
         val.textContent = parseInt(val.textContent, 10) + 1;
         thisPrice.textContent = addSpace(parseInt(removeSpace(thisPrice.textContent), 10) + parseInt(removeSpace(thisCurrentPrice.dataset.currentPrice), 10));
+        
+        if (parseInt(removeSpace(thisPrice.textContent), 10) >= 1000 && parseInt(removeSpace(thisPrice.textContent), 10) < 10000) {
+          priceContainer.classList.add('fix1000');
+        } else if (parseInt(removeSpace(thisPrice.textContent), 10) >= 10000) {
+          priceContainer.classList.remove('fix1000');
+          priceContainer.classList.add('fix10000');
+        };
       };
     });
   };
   
   // select
   const select = document.querySelectorAll(this.select);
+  const oldPrice = document.querySelectorAll('.cart .cont .row-price .old-price .text .price');
   
   for (let i = 0, len = select.length; i < len; i++) {
     const selectItems = select[i].querySelectorAll('li');
+    const selectLine = select[i].querySelector('p');
     
     for (let j = 0, jlen = selectItems.length; j < jlen; j++) {
+      selectItems[j].textContent = selectItems[j].dataset.weight;
+      
+      if (!(selectItems[j].classList.contains('active'))) {
+        selectItems[0].classList.add('active');
+      };
+      
       if (selectItems[j].classList.contains('active')) {
         select[i].dataset.currentPrice = selectItems[j].dataset.price;
         for (let y = 0, ylen = price.length; y < ylen; y++) {
           price[y].textContent = selectItems[j].dataset.price;
         };
+        for (let y = 0, ylen = oldPrice.length; y < ylen; y++) {
+          oldPrice[y].textContent = selectItems[j].dataset.oldPrice;
+        };
+        selectLine.textContent = selectItems[j].dataset.weight;
       };
     };
     
@@ -71,6 +98,9 @@ const CartPlugin = function (options) {
       const item = evt.target.closest('li');
       const thisPrice = par.querySelector(globThis.price);
       const thisVal = par.querySelector('.val');
+      const line = evt.target.closest('.cart .cont .row-calc .weight .weight-select p');
+      const lineText = this.querySelector('p');
+      const thisOldPrice = par.querySelector('.cart .cont .row-price .old-price .text .price');
       
       if (item) {
         if (!(item.classList.contains('active'))) {
@@ -82,6 +112,13 @@ const CartPlugin = function (options) {
           thisPrice.textContent = item.dataset.price;
           thisVal.textContent = 1;
         };
+        lineText.textContent = item.dataset.weight;
+        thisOldPrice.textContent = item.dataset.oldPrice;
+        this.classList.remove('open');
+      };
+      
+      if (line) {
+        this.classList.toggle('open');
       };
     });
   };
@@ -98,7 +135,7 @@ const CartPlugin = function (options) {
       basketCount.textContent = parseInt(basketCount.textContent, 10) + parseInt(thisCount.textContent, 10);
       
       if (globThis.basket.price !== undefined) {
-        basketPrice.textContent = parseInt(basketPrice.textContent, 10) + parseInt(thisPrice.textContent, 10);
+        basketPrice.textContent = addSpace(parseInt(removeSpace(basketPrice.textContent), 10) + parseInt(removeSpace(thisPrice.textContent), 10));
       };
     });
   };

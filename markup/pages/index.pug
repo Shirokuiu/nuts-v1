@@ -25,10 +25,163 @@ html(class="no-js", lang="ru")
                           a(href="#")
           .tit
             .container
+              h2.red Рекомендуем купить:
+          .my-slider.my-slider--sell
+            .container
+              .my-slider__wrap
+                div.slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 3; i++)
+                    each items in [{sellStatus:{class:'cart--sell',text:'Скидка',icon:true}},{sellStatus:{class:'cart--new',text:'Новое',icon:true}},{sellStatus:{class:'cart--hit',text:'Хит продаж',icon:true}},{sellStatus:{class:'',icon:false}},{sellStatus:{class:'',icon:false}}]
+                      div.slider-slide
+                        .cart.cart--recomand(class="" + items.sellStatus.class)
+                          a.headline(href="#") Грецкий Орех в скарлупе Чили
+                          div.img
+                            +img('cart-img.jpg')
+                            if items.sellStatus.icon
+                              div.item
+                                span.icon
+                                div.text
+                                  p= items.sellStatus.text
+                                  span.arrow
+                          div.cont
+                            div.row-calc
+                              div.weight
+                                h3 Вес, г.
+                                div.weight-select
+                                  p
+                                  ul
+                                    li(data-weight="50" data-price="200" data-old-price="320")
+                                    li.active(data-weight="100" data-price="489" data-old-price="620")
+                                    li(data-weight="150" data-price="789" data-old-price="920")
+                              div.calc-wrap
+                                h3 Кол-во
+                                div.calc
+                                  button.minus(type="button")
+                                  p 1
+                                  button.plus(type="button")
+                            div.row-price
+                              div.old-price
+                                p.status В наличии
+                                p.text 
+                                  span.price
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                              div.current-price
+                                p
+                                  span.text 489
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                            button.add(type="button") В корзину
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
+          .tit
+            .container
               h2 Орехи оптом в Москве
               div.block
                 p Интернет-магазин «Много орехов» - орехи, сухофрукты, семечки, цукаты, сладости, специи, пряности, крупы, бобовые, снеки, растительные масла, мёд и чай с доставкой домой или офис. Интернет-магазин продуктов для здорового питания специализируется на реализации орехов, сухофруктов, цукатов, сладостей, специй, пряностей и многих других полезных продуктов. Это современный и удобный ресурс, предлагающий оптовым и розничным покупателям качественные товары по минимальным ценам. Для вас отобрана только лучшая продукция, отвечающая всем существующим стандартам.
                 p Наш магазин - отличное решение для людей, желающих дешево покупать качественные продукты, поставляемые напрямую от производителя. Вся продукция проходит тщательный контроль качества, при хранении и транспортировке товара соблюдаются все санитарно-гигиенические правила и нормы. Цель магазина сделать ваше питание здоровым и правильным. Специалисты прекрасно разбираются в свойствах полезного продукта и заботятся о том, чтобы они удовлетворили каждого.
+          .tit
+            .container
+              h2 Кедровые орехи
+          .my-slider
+            .container
+              .my-slider__wrap
+                div.slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 3; i++)
+                    each items in [{sellStatus:{class:'cart--sell',text:'Скидка',icon:true}},{sellStatus:{class:'cart--new',text:'Новое',icon:true}},{sellStatus:{class:'cart--hit',text:'Хит продаж',icon:true}},{sellStatus:{class:'',icon:false}},{sellStatus:{class:'',icon:false}}]
+                      div.slider-slide
+                        .cart(class="" + items.sellStatus.class)
+                          a.headline(href="#") Грецкий Орех в скарлупе Чили
+                          div.img
+                            +img('cart-img.jpg')
+                            if items.sellStatus.icon
+                              div.item
+                                span.icon
+                                div.text
+                                  p= items.sellStatus.text
+                                  span.arrow
+                          div.cont
+                            div.row-calc
+                              div.weight
+                                h3 Вес, г.
+                                div.weight-select
+                                  p
+                                  ul
+                                    li(data-weight="50" data-price="200" data-old-price="320")
+                                    li.active(data-weight="100" data-price="489" data-old-price="620")
+                                    li(data-weight="150" data-price="789" data-old-price="920")
+                              div.calc-wrap
+                                h3 Кол-во
+                                div.calc
+                                  button.minus(type="button")
+                                  p 1
+                                  button.plus(type="button")
+                            div.row-price
+                              div.old-price
+                                p.status В наличии
+                                p.text 
+                                  span.price
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                              div.current-price
+                                p
+                                  span.text 489
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                            button.add(type="button") В корзину
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
+          .tit
+            .container
+              h2 Арахис
+          .my-slider
+            .container
+              .my-slider__wrap
+                div.slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 3; i++)
+                    each items in [{sellStatus:{class:'cart--sell',text:'Скидка',icon:true}},{sellStatus:{class:'cart--new',text:'Новое',icon:true}},{sellStatus:{class:'cart--hit',text:'Хит продаж',icon:true}},{sellStatus:{class:'',icon:false}},{sellStatus:{class:'',icon:false}}]
+                      div.slider-slide
+                        .cart(class="" + items.sellStatus.class)
+                          a.headline(href="#") Грецкий Орех в скарлупе Чили
+                          div.img
+                            +img('cart-img.jpg')
+                            if items.sellStatus.icon
+                              div.item
+                                span.icon
+                                div.text
+                                  p= items.sellStatus.text
+                                  span.arrow
+                          div.cont
+                            div.row-calc
+                              div.weight
+                                h3 Вес, г.
+                                div.weight-select
+                                  p
+                                  ul
+                                    li(data-weight="50" data-price="200" data-old-price="320")
+                                    li.active(data-weight="100" data-price="489" data-old-price="620")
+                                    li(data-weight="150" data-price="789" data-old-price="920")
+                              div.calc-wrap
+                                h3 Кол-во
+                                div.calc
+                                  button.minus(type="button")
+                                  p 1
+                                  button.plus(type="button")
+                            div.row-price
+                              div.old-price
+                                p.status В наличии
+                                p.text 
+                                  span.price
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                              div.current-price
+                                p
+                                  span.text 489
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                            button.add(type="button") В корзину
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
           .tit
             .container
               h2 Качество и безопасность товаров
@@ -43,6 +196,57 @@ html(class="no-js", lang="ru")
                     div.img
                       +img('' + (items.img))
                     p.text= items.text
+          .tit
+            .container
+              h2.red Популярные товары
+          .my-slider.my-slider--sell
+            .container
+              .my-slider__wrap
+                div.slider.owl-carousel.reset-owl
+                  - for (let i = 0; i < 3; i++)
+                    each items in [{sellStatus:{class:'cart--sell',text:'Скидка',icon:true}},{sellStatus:{class:'cart--new',text:'Новое',icon:true}},{sellStatus:{class:'cart--hit',text:'Хит продаж',icon:true}},{sellStatus:{class:'',icon:false}},{sellStatus:{class:'',icon:false}}]
+                      div.slider-slide
+                        .cart.cart--recomand(class="" + items.sellStatus.class)
+                          a.headline(href="#") Грецкий Орех в скарлупе Чили
+                          div.img
+                            +img('cart-img.jpg')
+                            if items.sellStatus.icon
+                              div.item
+                                span.icon
+                                div.text
+                                  p= items.sellStatus.text
+                                  span.arrow
+                          div.cont
+                            div.row-calc
+                              div.weight
+                                h3 Вес, г.
+                                div.weight-select
+                                  p
+                                  ul
+                                    li(data-weight="50" data-price="200" data-old-price="320")
+                                    li.active(data-weight="100" data-price="489" data-old-price="620")
+                                    li(data-weight="150" data-price="789" data-old-price="920")
+                              div.calc-wrap
+                                h3 Кол-во
+                                div.calc
+                                  button.minus(type="button")
+                                  p 1
+                                  button.plus(type="button")
+                            div.row-price
+                              div.old-price
+                                p.status В наличии
+                                p.text 
+                                  span.price
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                              div.current-price
+                                p
+                                  span.text 489
+                                  span.currency
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble', className: 'icon'})
+                            button.add(type="button") В корзину
+                              span
+                                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'icon'})
         
       footer.page-footer
         +footer-content

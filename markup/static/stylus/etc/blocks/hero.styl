@@ -3,6 +3,7 @@
   
   box-sizing: border-box;
   min-height: 250px;
+  margin-bottom 26px
   padding-top: 90px;
   
   background-image url('%=static=%content/hero-bg.jpg')
@@ -58,6 +59,9 @@
   h2
     font('Raleway', 48px, 700, #FFFFFF)
     
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom 50px
     
     text-align center
@@ -98,6 +102,69 @@
       &:nth-child(7)
         a
           bgi('wa.svg')
+          
+@media(max-width 1000px)
+  .hero__slider
+    min-height: 220px;
+    
+  .hero__slider-slide h2
+    font-size: 34px;
+    line-height: 38px;
+    margin-bottom: 40px;
+    
+@media(max-width 760px)
+  .hero__slider
+    padding-top: 62px;
+    min-height: 190px;
+    
+    background-image url('%=static=%content/hero-bg@tablet.jpg')
+    
+  .hero__slider-slide h2
+    font-size: 23px;
+    line-height: 27px;
+    max-width: 690px;
+    
+  .hero__slider .owl-prev, .hero__slider .owl-next
+    width: 30px;
+    height: 30px;
+    
+  .hero__slider .owl-prev span, .hero__slider .owl-next span
+    width: 16px;
+    height: 17px;
+    background-size: 15px 15px;
+    
+@media(max-width 480px)
+  .hero__slider-slide h2
+    max-width: 450px;
+    
+  .hero__slider .owl-nav
+    height: 30px;
+    left: 10px;
+    right: 10px;
+    
+  .hero__slider .owl-dots
+    margin-top: 15px;
+    
+  .hero__slider
+    margin-bottom: 16px;
+    
+  .hero__slider .owl-nav
+    display none
+    
+  .hero__slider-slide h2
+    margin-bottom: 18px;
+    
+  .hero__slider-slide ul
+    margin-right: auto;
+    
+  .hero__slider .owl-dots
+    margin-top: 26px;
+    
+  .hero__slider
+    padding-top: 42px;
+    
+  .hero__slider
+    background-image url('%=static=%content/hero-bg@mobile.jpg')
           
           
           
